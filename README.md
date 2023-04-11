@@ -1,3 +1,3 @@
-# HomeWordk_1
+# HomeWork_1
 only C language homework
 

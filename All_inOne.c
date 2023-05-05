@@ -56,7 +56,7 @@ int sumfrom(int first, int last)
 
 int main() // main function.
 {
-    int select;
+    char select;
     int A, B, Arr[1000];
     char control;
 
@@ -69,12 +69,12 @@ int main() // main function.
         printf("3. Enter \"3\" to Find the largest of 10 number.\n");
         printf("4. Enter \"4\" to Find the average of 10 numbers.\n");
         printf("\n===> ");
-        scanf("%d", &select);
+        scanf("%c", &select);
         getchar();
 
         switch (select)
         {
-        case 1:
+        case '1':
             printf("\n\tSum From 1 to 10\n");
 
             printf("\t----------------\n");
@@ -82,7 +82,7 @@ int main() // main function.
             printf("\nThe sum from 1 to 10 is %d\n", sumfrom(1, 10));
             break;
 
-        case 2:
+        case '2':
             printf("\n\tSum From Range of Number\n");
             printf("\t------------------------\n");
             printf("\nEnter the First Number of Range: ");
@@ -95,7 +95,7 @@ int main() // main function.
             printf("The sum From %d to %d is %d\n", A, B, sumfrom(A, B));
 
             break;
-        case 3:
+        case '3':
             printf("\n\t\"Enter 10 number you want to find the largest of\"\n");
             printf("\t--------------------------------------------------\n");
 
@@ -123,7 +123,7 @@ int main() // main function.
 
             printf("\nThe largest Number is %d\n", largest(10, Arr));
             break;
-        case 4:
+        case '4':
             printf("\n\t Enter the 10 number you want to find the average of\n");
             printf("\t-----------------------------------------------------\n\n");
             for (int i = 0; i < 10; i++)
@@ -155,9 +155,12 @@ int main() // main function.
         default:
             break;
         }
+        if(select !='1' && select != '2' && select != '3' && select != '4'){
+            printf("//// Wrong input please go back to \"Main menu\" and select the right option\\\\\n");
+        }
 
         // For break or continue the loop.
-        printf("\nEnter \"m/M\" to go back to main Manu or Enter \"q/Q\" to Exit.\n");
+        printf("\nEnter \"m/M\" to go back to \"Main Menu\" or Enter \"q/Q\" to Exit.\n");
         printf("===> ");
 
         scanf("%c", &control);
